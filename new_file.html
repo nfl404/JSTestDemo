@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Test Demo</title>
+		<h1 id="title">JavaScript</h1>
+		<p id="content">JavaScript是脚本语言，轻量级的编程语言。是可掺入HTML页面的编程代码，插入HTML页面后，可由所有的现代浏览器执行。</p>
+	</head>
+	<script>
+		document.write('<h1>一、JS简介</h1>');
+
+		document.write('<h2>1、写入HTML输入</h2>');
+		document.write("<p>实例：document.whitre('JS写一个p标签');</p>");
+	</script>
+
+	<body>
+		<h2>2、对事件作出反应</h2>
+		<button type="button" onclick="alert('对事件作出反应')">点击这里</button>
+		<h2>3、改变HTML内容</h2>
+		<script>
+			function changeHTMLFunction() {
+				x = document.getElementById('content');
+				if(x.innerHTML == "改变HTML内容。") {
+					x.innerHTML = "JavaScript是脚本语言，轻量级的编程语言。是可掺入HTML页面的编程代码，插入HTML页面后，可由所有的现代浏览器执行。";
+				} else {
+					x.innerHTML = "改变HTML内容。";
+				}
+			}
+		</script>
+		<button type="submit" onclick="changeHTMLFunction()">点击这里</button>
+		<h2>4、改变HTMl内容</h2>
+		<script>
+			function changeImage() {
+				element = document.getElementById('imageId');
+				if(element.scr.match("bulbon")) {
+					alert();
+					element.src = "img/eg_bulboff.gif";
+				} else {
+					alert();
+					element.src = "img/eg_bulbon.gif";
+				}
+			}
+		</script>
+		<img id="imageId" onclick="changeImage()" src="img/eg_bulboff.gif" />
+	</body>
+	<script>
+		document.write('<h2>4、改变HTML图像</h2>');
+		document.write('<h2>5、改变HTML样式</h2>');
+		document.write('<h2>6、改变HTMl图像</h2>');
+		document.write('<h2>7、验证输入</h2>');
+	</script>
+
+</html>
